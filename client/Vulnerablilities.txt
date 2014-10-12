@@ -1,0 +1,24 @@
+Vulnerablilities
+
+1. XSS work but <script> tag doesn't
+2. Developers some times uses eval()
+3. No sanitization
+4. Iframe injection 
+5. Clickjacking without inital iframe loading
+6. Passing SQL related parameters
+7. Session hijacking
+8. Click jacking with diff attack vector
+9. JSON vulnerability (already fixed) [sends cookie to 3rd part. Gmail exploit]
+10. Cookiee stealing
+11. JSONP vulnerability in pages which use eval
+12. HTML 5 local/session storage exploit
+
+
+
+Do a browser extension
+
+var insertedNodes = [];
+document.addEventListener("DOMNodeInserted", function(e) {
+  insertedNodes.push(e.target);
+}, false);
+console.log(insertedNodes);

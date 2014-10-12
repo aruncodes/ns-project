@@ -1,0 +1,31 @@
+{
+  "manifest_version": 2,
+
+  "name": "AJAX Defender",
+  "description": "This extension defends against attacks using AJAX",
+  "version": "1.0",
+
+  "permissions": [
+    "tabs",
+    "webRequest",
+    "http://*/*",
+    "https://*/*"
+  ],
+
+  "content_scripts":
+  [{
+    "matches":
+    [
+      "http://*/*",
+      "https://*/*"
+    ],
+    "js":
+    [
+      "detect.js"
+    ]
+  }],
+
+  "background": {
+    "scripts": ["background.js"]
+  }
+}
