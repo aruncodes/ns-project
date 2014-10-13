@@ -15,11 +15,7 @@
 		"title" : "Script in attribute",
 		"data" : "<style onload='' ></style>"
 	},
-	{
-		"title" : "Iframe Injection",
-		"data" : "<div style='position:absolute; top:0px;left:0px; height:100%; width:100%; background: #FFF;'> <iframe style='opacity:0.11; height:100%; width:100%;' src='http://www.w3schools.com'> Cannot loaf</iframe></div>"
-	},
-	{
+    {
 		"title" : "Click jacking without initial iframe",
 		"data" : "<!--<iframe id='ifr' style='opacity:01; border: 0px solid; position:absolute;' scrolling='no' frameborder='0' height='1px' width='1px' src='attacker.html'></iframe><style onload='window.onmousemove=function(e){ifr=document.getElementById(\"ifr\");ifr.style.left=(e.pageX-0)+\"px\";ifr.style.top=(e.pageY-0)+\"px\";}; document.getElementById(\"ifr\").onload = function(){this.contentWindow.scrollTo(15,15)};'></style>-->"
 	},
@@ -38,5 +34,10 @@
 	{
 		"title" : "",
 		"data"	:	"<p><b><i><a><tr></tr></a></i></b><p>"
-	}
+	},
+    {
+        "title" : "SCRIPT",
+        "data"  : "<script type='text/javascript'>alert('hey');</script>"
+    }
+
 ]
