@@ -1,0 +1,14 @@
+.warningDiv {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    background: orange;
+    z-index: 1000;
+}
+.exitDiv {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: orange;
+    z-index: 1000;
+}
