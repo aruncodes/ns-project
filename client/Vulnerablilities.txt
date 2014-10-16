@@ -16,9 +16,3 @@ Vulnerablilities
 
 
 Do a browser extension
-
-var insertedNodes = [];
-document.addEventListener("DOMNodeInserted", function(e) {
-  insertedNodes.push(e.target);
-}, false);
-console.log(insertedNodes);
