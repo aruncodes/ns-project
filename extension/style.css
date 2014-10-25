@@ -1,14 +1,29 @@
+.heading {
+    font-size: 20px;
+    color: red;
+}
+
+.warning {
+    font-size: 20px;
+    color: red;
+    font-weight: bold;
+}
 .warningDiv {
+    padding:10px 10px 10px 20px;
     position: absolute;
-    top: 0px;
-    width: 100%;
-    background: orange;
+    top: 10px;
+    right: 10px;
+    width: 25%;
+    max-height: 500px;
+    overflow-y: scroll;
     z-index: 1000;
+    border-radius:10px;
+    background:#fff8c4 10px 50%;
+    border:1px solid #f2c779;
 }
 .exitDiv {
     position: absolute;
     top: 20px;
-    right: 20px;
-    background: orange;
+    right: 30px;
     z-index: 1000;
 }

@@ -30,21 +30,22 @@
     */
         
     
-    var warnCnt = 1;
     var showWarnings = function() {
+        warningDiv.innerHTML = "<span align='center' class='heading'>AJAX-DEFENDER</span> <br /> <br />\n";
+        warningDiv.innerHTML += "<span class='warning'>WARNINGS</span> <br />\n";
         for(i = 0; i < vulnerableNodes.length; i++) {
-            warningDiv.innerHTML += ""+ warnCnt+". "+vulnerableNodes[i]+"<br />";
-            warnCnt++;
+            warningDiv.innerHTML += ""+ (i+1) +". "+vulnerableNodes[i]+"<br />";
         }
     }
 
 	var checkContents = function (e) {
+        //console.log("dom node inserted");
 
 		//push nodes to global var
 		insertedNodes.push(e.target);
 
 		//check in inserted Nodes
-		//console.log(insertedNodes); 
+		console.log(insertedNodes); 
 		// console.log('loaded new child');
         // alert();
         // console.log(e.target);
@@ -54,8 +55,6 @@
                 warningDiv = document.createElement('div'); 
                 warningDiv.id = 'warningDiv';
                 warningDiv.className = 'warningDiv';
-                warningDiv.innerHTML = "AJAX-DEFENDER <br /> <br />\n";
-                warningDiv.innerHTML += "WARNINGS <br />\n";
                 document.body.appendChild(warningDiv);
 
                 exitDiv = document.createElement('div'); 
@@ -114,12 +113,15 @@
 		var iFramePat = /<\s*iframe/i;
         var scriptPat = /<\s*script/i;
         var onEventPat = /<.*\s+on[^\s]+\s*=[\'\"].+[\'\"].*>/i;
+        var stylePat = /<\s*style[^>]*>[^{]*{[^}]*}.*<\/style\s*>/i;
 
 		if( iFramePat.test(data) )
 			return true;
         if( scriptPat.test(data) )
             return true;
         if( onEventPat.test(data) )
+            return true;
+        if( stylePat.test(data) )
             return true;
 
 		return false;
